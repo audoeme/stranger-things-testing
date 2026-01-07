@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things - Guia das Temporadas</title>
+
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #e50914;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 90px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #1a1a1a, #000);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #e50914;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 15px 35px;
+    font-size: 1.1em;
+    background-color: #e50914;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ===== TEMPORADAS ===== */
+.seasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+.season-card {
+    background-color: #1c1c1c;
+    border: 2px solid #e50914;
+    border-radius: 15px;
+    width: 330px;
+    margin: 15px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.season-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.season-card h3 {
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.season-card p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.season-card strong {
+    display: block;
+    margin-top: 10px;
+}
+
+.season-card ul {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.season-card ul li::before {
+    content: "• ";
+    color: #e50914;
+}
+
+/* ===== TAG ===== */
+.tag {
+    display: inline-block;
+    background-color: #e50914;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* ===== FORMULÁRIO ===== */
+.contact {
+    background-color: #1c1c1c;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #e50914;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 2px solid #e50914;
+    background-color: #111;
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #aaa;
+}
+
+.contact button {
+    padding: 14px;
+    background-color: #e50914;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.contact button:hover {
+    opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .seasons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.3em;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Stranger Things</h1>
+    <nav>
+        <a href="#hero">Início</a>
+        <a href="#seasons">Temporadas</a>
+        <a href="#contact">Newsletter</a>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <h1>O Mundo Invertido te espera</h1>
+    <p>Conheça todas as temporadas, personagens e mistérios de Hawkins.</p>
+    <button onclick="alert('Você entrou no Mundo Invertido!')">Explorar</button>
+</section>
+
+<section class="seasons" id="seasons">
+
+    <!-- Temporada 1 -->
+    <div class="season-card">
+        <span class="tag">2016 • 8 episódios</span>
+        <h3>📺 Temporada 1</h3>
+        <p><strong>Vilão:</strong> Demogorgon</p>
+        <p>O desaparecimento de Will revela experimentos secretos e uma garota com poderes.</p>
+        <strong>Personagens:</strong>
+        <ul>
+            <li>Eleven</li><li>Mike Wheeler</li><li>Dustin Henderson</li><li>Lucas Sinclair</li>
+            <li>Will Byers</li><li>Joyce Byers</li><li>Jim Hopper</li>
+            <li>Nancy Wheeler</li><li>Jonathan Byers</li><li>Steve Harrington</li>
+        </ul>
+    </div>
+
+    <!-- Temporada 2 -->
+    <div class="season-card">
+        <span class="tag">2017 • 9 episódios</span>
+        <h3>📺 Temporada 2</h3>
+        <p><strong>Vilão:</strong> Mind Flayer</p>
+        <p>Hawkins continua ameaçada enquanto Will sofre consequências do Mundo Invertido.</p>
+        <strong>Personagens:</strong>
+        <ul>
+            <li>Eleven</li><li>Mike Wheeler</li><li>Dustin Henderson</li><li>Lucas Sinclair</li>
+            <li>Will Byers</li><li>Joyce Byers</li><li>Jim Hopper</li>
+            <li>Nancy Wheeler</li><li>Jonathan Byers</li><li>Steve Harrington</li>
+            <li>Max Mayfield</li><li>Billy Hargrove</li><li>Bob Newby</li>
+        </ul>
+    </div>
+
+    <!-- Temporada 3 -->
+    <div class="season-card">
+        <span class="tag">2019 • 8 episódios</span>
+        <h3>📺 Temporada 3</h3>
+        <p><strong>Vilão:</strong> Mind Flayer (forma física)</p>
+        <p>O shopping Starcourt esconde uma ameaça russa e um novo horror.</p>
+        <strong>Personagens:</strong>
+        <ul>
+            <li>Eleven</li><li>Mike Wheeler</li><li>Dustin Henderson</li><li>Lucas Sinclair</li>
+            <li>Will Byers</li><li>Joyce Byers</li><li>Jim Hopper</li>
+            <li>Nancy Wheeler</li><li>Jonathan Byers</li><li>Steve Harrington</li>
+            <li>Max Mayfield</li><li>Billy Hargrove</li>
+            <li>Robin Buckley</li><li>Erica Sinclair</li><li>Alexei</li>
+        </ul>
+    </div>
+
+    <!-- Temporada 4 -->
+    <div class="season-card">
+        <span class="tag">2022 • 9 episódios</span>
+        <h3>📺 Temporada 4</h3>
+        <p><strong>Vilão:</strong> Vecna (Henry Creel)</p>
+        <p>O maior terror psicológico da série revela a origem do Mundo Invertido.</p>
+        <strong>Personagens:</strong>
+        <ul>
+            <li>Eleven</li><li>Mike Wheeler</li><li>Dustin Henderson</li><li>Lucas Sinclair</li>
+            <li>Will Byers</li><li>Joyce Byers</li><li>Jim Hopper</li>
+            <li>Nancy Wheeler</li><li>Jonathan Byers</li><li>Steve Harrington</li>
+            <li>Max Mayfield</li><li>Robin Buckley</li>
+            <li>Erica Sinclair</li><li>Eddie Munson</li>
+            <li>Vecna</li><li>Argyle</li>
+        </ul>
+    </div>
+
+    <!-- Temporada 5 -->
+    <div class="season-card">
+        <span class="tag">2025 • Temporada Final</span>
+        <h3>📺 Temporada 5</h3>
+        <p><em>🔥 Destaque:</em> O confronto final entre Hawkins e o Mundo Invertido.</p>
+        <p>
+        Hawkins enfrenta as consequências diretas da abertura dos portais.
+        O grupo se reúne para a batalha final contra o Mundo Invertido.
+        </p>
+        <strong>Personagens esperados:</strong>
+        <ul>
+            <li>Eleven</li>
+            <li>Mike Wheeler</li>
+            <li>Dustin Henderson</li>
+            <li>Lucas Sinclair</li>
+            <li>Will Byers</li>
+            <li>Max Mayfield</li>
+            <li>Jim Hopper</li>
+            <li>Joyce Byers</li>
+            <li>Nancy Wheeler</li>
+            <li>Steve Harrington</li>
+            <li>Robin Buckley</li>
+            <li>Vecna</li>
+    </ul>
+
+</div>    
+
+</section>
+
+<section class="contact" id="contact">
+    <h2>Receba novidades de Hawkins</h2>
+    <form onsubmit="alert('Inscrição realizada com sucesso!'); return false;">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea placeholder="Personagem favorito" rows="4"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 Stranger Things Fan Page
+</footer>
+
+</body>
+</html>
