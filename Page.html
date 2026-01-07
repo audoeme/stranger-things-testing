@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things - Guia das Temporadas</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #e50914;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: url('https://imgur.com/a/Dctx362'); 
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: #f0f0f0;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #e50914;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .seasons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: #111;
+        }
+
+        .season-card {
+            background-color: #1c1c1c;
+            border: 2px solid #e50914;
+            border-radius: 15px;
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .season-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+        }
+
+        .season-card h3 {
+            color: #e50914;
+            margin-bottom: 10px;
+        }
+
+        .season-card ul {
+            list-style: none;
+        }
+
+        .season-card ul li::before {
+            content: "• ";
+            color: #e50914;
+        }
+
+        .contact {
+            background-color: #1c1c1c;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #e50914;
+            margin-bottom: 30px;
+        }
+
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid #e50914;
+            background-color: #111;
+            color: #f0f0f0;
+        }
+
+        .contact button {
+            padding: 15px 30px;
+            font-size: 1em;
+            background-color: #e50914;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #111;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .seasons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stranger Things</h1>
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#seasons">Temporadas</a>
+            <a href="#contact">Newsletter</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Explore o Mundo de Stranger Things</h1>
+        <p>Relembre as aventuras, mistérios e personagens de Hawkins.</p>
+        <button onclick="alert('Você entrou no Mundo Invertido!')">Começar a Explorar</button>
+    </section>
+
+    <section class="seasons" id="seasons">
+        <!-- Temporada 1 -->
+        <div class="season-card">
+            <h3>Temporada 1</h3>
+            <p>A história começa com o desaparecimento de Will Byers e o surgimento de Eleven.</p>
+            <strong>Principais personagens:</strong>
+            <ul>
+                <li>Mike Wheeler</li>
+                <li>Eleven</li>
+                <li>Will Byers</li>
+                <li>Jim Hopper</li>
+            </ul>
+        </div>
+
+        <!-- Temporada 2 -->
+        <div class="season-card">
+            <h3>Temporada 2</h3>
+            <p>O Mundo Invertido continua ameaçando Hawkins e novos perigos surgem.</p>
+            <strong>Principais personagens:</strong>
+            <ul>
+                <li>Max Mayfield</li>
+                <li>Lucas Sinclair</li>
+                <li>Dustin Henderson</li>
+                <li>Eleven</li>
+            </ul>
+        </div>
+
+        <!-- Temporada 3 -->
+        <div class="season-card">
+            <h3>Temporada 3</h3>
+            <p>O shopping Starcourt é inaugurado, mas o Mind Flayer planeja um novo ataque.</p>
+            <strong>Principais personagens:</strong>
+            <ul>
+                <li>Steve Harrington</li>
+                <li>Nancy Wheeler</li>
+                <li>Joyce Byers</li>
+                <li>Hopper</li>
+            </ul>
+        </div>
+
+        <!-- Temporada 4 -->
+        <div class="season-card">
+            <h3>Temporada 4</h3>
+            <p>Novos vilões surgem e o grupo enfrenta o maior perigo até agora.</p>
+            <strong>Principais personagens:</strong>
+            <ul>
+                <li>Eleven</li>
+                <li>Mike Wheeler</li>
+                <li>Max Mayfield</li>
+                <li>Vecna</li>
+            </ul>
+        </div>
+
+        <!-- Temporada 5 (Se existir, placeholder) -->
+        <div class="season-card">
+            <h3>Temporada 5</h3>
+            <p>Prepare-se para a conclusão épica da saga de Hawkins!</p>
+            <strong>Principais personagens:</strong>
+            <ul>
+                <li>Todos os personagens principais</li>
+                <li>Novos vilões</li>
+                <li>Surpresas finais</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Receba Novidades de Stranger Things!</h2>
+        <form onsubmit="alert('Inscrição realizada com sucesso!'); return false;">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea placeholder="Mensagem ou personagem favorito" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 Stranger Things Fan Page. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
