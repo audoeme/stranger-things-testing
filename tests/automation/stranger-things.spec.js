@@ -32,5 +32,30 @@ test('CT02 – Hover effect on season cards', async ({ page }) => {
       expect(transform).not.toBe('none');
       expect(boxShadow).not.toBe('none');
     }
+  });
+
+test('CT03 – Newsletter valid submission', async ({ page }) => {
+    const lp = new LandingPage(page);
+    await page.goto(URL);
+
+    page.on('dialog', async dialog => {
+      expect(dialog.message()).toBe('Inscrição realizada com sucesso!');
+      await dialog.accept();
     });
+
+    await lp.fillNewsletterForm('Lucas', 'lucas@test.com', 'Eleven é minha favorita!');
+    await lp.submitNewsletter();
+  });
+
+test('CT04 – Newsletter invalid submission', async ({ page }) => {
+    const lp = new LandingPage(page);
+    await page.goto(URL);
+
+    // Tenta enviar formulário vazio
+    await lp.submitNewsletter();
+
+    // O navegador deve focar no primeiro campo obrigatório
+    await expect(lp.nameInput).toBeFocused();
+  });  
+  
 });
