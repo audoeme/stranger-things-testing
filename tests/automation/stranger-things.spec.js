@@ -1,12 +1,12 @@
-import { Page, Locator } from '@playwright/test';
-import { StrangerThingsPage } from './src/LandingPage';
+import { test, expect } from '@playwright/test';
+import { LandingPage } from './src/pages/LandingPage';
 
 const URL = 'https://audoeme.github.io/stranger-things-testing/';
 
 test.describe('Stranger Things Landing Page', () => {
 
 test('CT01 – Hero button alert', async ({ page }) => {
-    const sp = new StrangerThingsPage(page);
+    const sp = new LandingPage(page);
     await page.goto(URL);
 
     page.on('dialog', async dialog => {
@@ -18,7 +18,7 @@ test('CT01 – Hero button alert', async ({ page }) => {
   });    
 
 test('CT02 – Hover effect on season cards', async ({ page }) => {
-    const sp = new StrangerThingsPage(page);
+    const sp = new LandingPage(page);
     await page.goto(URL);
 
     const cardsCount = await sp.getSeasonCardsCount();
