@@ -51,11 +51,18 @@ test('CT04 – Newsletter invalid submission', async ({ page }) => {
     const lp = new LandingPage(page);
     await page.goto(URL);
 
-    // Tenta enviar formulário vazio
     await lp.submitNewsletter();
 
-    // O navegador deve focar no primeiro campo obrigatório
     await expect(lp.nameInput).toBeFocused();
   });  
-  
+
+test('CT05 – Scroll via menu links', async ({ page }) => {
+  const lp = new LandingPage(page);
+  await page.goto(URL);
+
+  await lp.goToHome();
+  await lp.goToSeasons();
+  await lp.goToNewsletter();
+  await lp.scrollToFooterAndCheck();
+  });
 });
